@@ -1,0 +1,46 @@
+﻿ @model List<Dish>;
+ 
+ @{
+    var CruDelicious = Model;
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to CruDelicious</h1>
+<p>Home | <a href="/Dishes/Create">Add a Dish!</a></p>
+
+</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+
+<body>
+    <p> Check out some recent dishes</p>
+     <table class="table">
+        <tbody>
+    @foreach (var dish in CruDelicious)
+            {
+                <tr>
+                    <td>
+                        <a href="/Dishes/@dish.DishId">@dish.Name</a>
+                        <p>by @dish.ChefName</p>
+                        <p>@dish.Description</p>
+                        <p>Calories: @dish.Calories</p>
+                        <p>Tastiness: @dish.Tastiness</p>
+                        <a href="/Dishes/Edit/@dish.DishId" class="btn btn-primary">Edit</a>
+                    <form action="/Dishes/@dish.DishId/Delete" method="post" style="display:inline;">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+     </table>
+</body>
+</html>
+

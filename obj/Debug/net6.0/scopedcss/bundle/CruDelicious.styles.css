@@ -1,0 +1,49 @@
+/* _content/CruDelicious/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-xstbl01ugb] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-xstbl01ugb] {
+  color: #0077cc;
+}
+
+.btn-primary[b-xstbl01ugb] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-xstbl01ugb], .nav-pills .show > .nav-link[b-xstbl01ugb] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-xstbl01ugb] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-xstbl01ugb] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-xstbl01ugb] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-xstbl01ugb] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-xstbl01ugb] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

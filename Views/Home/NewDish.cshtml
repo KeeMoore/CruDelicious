@@ -1,0 +1,50 @@
+@model Dish;
+
+@{
+    var dish = Model;
+    ViewData["Title"] = "Add a New Dish";
+}
+
+<section>
+    <h1 class="display-4 mb-3">Add a New Dish!</h1>
+    <div class="card shadow">
+        <div class="card-body">
+            <form asp-action="Create" asp-controller="Home" method="post">
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Name"></label>
+                    <input class="form-control" asp-for="Name" required>
+                    <span class="form-text text-warning" asp-validation-for="Name"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="ChefName"></label>
+                    <input class="form-control" asp-for="ChefName" required>
+                    <span class="form-text text-warning" asp-validation-for="ChefName"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Tastiness"></label>
+                    <select class="form-control" asp-for="Tastiness" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <span class="form-text text-warning" asp-validation-for="Tastiness"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Calories"></label>
+                    <input class="form-control" asp-for="Calories" required>
+                    <span class="form-text text-warning" asp-validation-for="Calories"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Description"></label>
+                    <textarea class="form-control" asp-for="Description" required></textarea>
+                    <span class="form-text text-warning" asp-validation-for="Description"></span>
+                </div>
+                <div class="text-end">
+                    <button type="submit" class="btn btn-primary">Add Dish</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
